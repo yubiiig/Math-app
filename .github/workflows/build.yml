@@ -28,6 +28,9 @@ jobs:
     - name: Restore My Original App Code & Dependencies
       run: git checkout -- lib/ pubspec.yaml
 
+    - name: Update intl Dependency
+      run: flutter pub add intl:^0.20.3
+
     - name: Install dependencies
       run: flutter pub get
 
