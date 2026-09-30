@@ -24,7 +24,7 @@ jobs:
         channel: 'stable'
 
     - name: Create Android Project Structure
-      run: flutter create . --project-name math_classroom --platforms=android --org com.example
+      run: flutter create . --overwrite --project-name math_classroom --platforms=android --org com.example
 
     - name: Install dependencies
       run: flutter pub get
