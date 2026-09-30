@@ -22,14 +22,11 @@ jobs:
       with:
         channel: 'stable'
 
-    - name: Create Android Project Structure
-      run: flutter create . --overwrite --project-name math_classroom --platforms=android --org com.example
+    - name: Create Android & iOS Project Structure
+      run: flutter create . --overwrite --project-name math_classroom --platforms=android,ios --org com.example
 
-    - name: Restore My Original App Code & Dependencies
+    - name: Restore App Source Code
       run: git checkout -- lib/ pubspec.yaml
-
-    - name: Update intl Dependency
-      run: flutter pub add intl:^0.20.3
 
     - name: Install dependencies
       run: flutter pub get
