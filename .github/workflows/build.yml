@@ -26,6 +26,9 @@ jobs:
     - name: Create Android Project Structure
       run: flutter create . --overwrite --project-name math_classroom --platforms=android --org com.example
 
+    - name: Restore My Original App Code
+      run: git checkout -- lib/
+
     - name: Install dependencies
       run: flutter pub get
 
