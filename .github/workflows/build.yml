@@ -20,14 +20,13 @@ jobs:
     - name: Set up Flutter
       uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.19.x'
         channel: 'stable'
 
     - name: Create Android Project Structure
       run: flutter create . --overwrite --project-name math_classroom --platforms=android --org com.example
 
-    - name: Restore All Original Project Files
-      run: git checkout HEAD -- .
+    - name: Restore My Original App Code & Dependencies
+      run: git checkout -- lib/ pubspec.yaml
 
     - name: Install dependencies
       run: flutter pub get
