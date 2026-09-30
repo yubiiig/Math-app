@@ -12,7 +12,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
 
-  firebase_core: ^3.3fix intl version0
+  firebase_core: ^3.3.0
   cloud_firestore: ^5.2.0
   firebase_messaging: ^15.0.4
 
